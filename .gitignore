@@ -1,0 +1,23 @@
+# Ignore output files
+*.txt
+*.fasta
+*.db
+temp_query.fasta
+temp_genome.fasta
+blast_results.txt
+
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+
+# Ignore logs
+*.log
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Include Python, Bash, and Perl scripts
+!*.py
+!*.sh
+!*.pl
