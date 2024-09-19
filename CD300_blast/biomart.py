@@ -1,14 +1,16 @@
 import requests, re, subprocess, os
 
+print("Current Working Directory:", os.getcwd())
 
 def fetch_sequence(ensembl_accession):
+    # Ensure the accession is formatted correctly for the Ensembl API
     url = f"https://rest.ensembl.org/sequence/id/{ensembl_accession}?type=seq&content-type=text/x-fasta"
     response = requests.get(url)
 
     if response.ok:
         return response.text
     else:
-        print(f"Error fetching data for {ensembl_accession}: {response.status_code}")
+        print(f"Error fetching data for {ensembl_accession}: {response.status_code} - {response.text}")
         return None
 
 def run_blast(query_sequence, db_name):
