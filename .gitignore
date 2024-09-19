@@ -21,3 +21,4 @@ Thumbs.db
 !*.py
 !*.sh
 !*.pl
+.vscode/launch.json
