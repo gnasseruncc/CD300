@@ -1,4 +1,4 @@
-# Uses NCBI API to grab human sequence from NCBI and blast it against cd300 protein file
+# Uses NCBI API to grab human sequences from refseq_protein on NCBI and blast it against cd300 protein file
 
 from Bio.Blast import NCBIWWW
 from Bio.Blast import NCBIXML
