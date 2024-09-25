@@ -20,7 +20,7 @@ logging.info(f"Loaded {len(nucleotide_sequences)} nucleotide sequences.")
 e_value_thresh = 1e-3 # Change to -10
 pause_time = 5  # Pause time between BLAST requests
 
-blast_results = {}
+blast_results = []
 
 # Function to add BLAST results to the list
 def collect_blast_results(record_id, blast_records_list, e_value_thresh):
