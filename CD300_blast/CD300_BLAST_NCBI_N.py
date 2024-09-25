@@ -17,7 +17,7 @@ nucleotide_sequences = list(SeqIO.parse(fasta_file, "fasta"))
 logging.info(f"Loaded {len(nucleotide_sequences)} nucleotide sequences.")
 
 # Set BLAST parameters
-e_value_thresh = 1e-3
+e_value_thresh = 1e-3 # Change to -10
 pause_time = 5  # Pause time between BLAST requests
 
 # Function to write BLAST results to file
