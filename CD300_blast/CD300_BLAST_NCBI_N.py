@@ -3,6 +3,7 @@ from Bio import SeqIO
 import os
 import logging
 import time
+import pandas as pd
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
