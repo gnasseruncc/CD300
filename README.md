@@ -19,7 +19,7 @@ This pipeline automates the process of downloading, filtering, and analyzing ver
 ```cat ncbi_dataset/data/*/protein.faa >> vertebrate_proteins.faa```
 
 ### 4. Filter Selected Species
-```python3 SIRP-Seeker-Pypeline/filteringproteinfiles.py vertebrate_proteins.faa vertebrate_proteins_cleaned.faa```
+```python3 filteringproteinfiles.py vertebrate_proteins.faa vertebrate_proteins_cleaned.faa```
 
 ### 5. Remove Specific Species from the Protein File
 The species we removed from this dataset were already searched for their CD300 sequences manually on Ensembl, so there is no reason to search  for them again and can be excluded from this specific pipeline. 
