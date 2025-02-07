@@ -1,5 +1,6 @@
 # CD300 Analyzation Pipeline
-The goal of this project is to analyze CD300s
+The goal of this project is to analyze ortholog/paralog functional evolution of the CD300 immune gene family across all major vertebrate lineages.
+
 
 ## Phase 1: Generate CD300 Verebrate Dataset
 This pipeline automates the process of downloading, filtering, and analyzing vertebrate protein datasets to identify CD300 protein homologs across species using BLAST. Steps 1-4 were adapted from the [SIRP-Seeker-Pypeline](https://github.com/Rittika1/SIRP-Seeker-Pypeline).
