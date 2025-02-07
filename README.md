@@ -1,4 +1,7 @@
-# Vertebrate Protein BLAST Pipeline
+# CD300 Analyzation Pipeline
+The goal of this project is to analyze CD300s
+
+## Phase 1: Generate CD300 Verebrate Dataset
 
 ## Overview
 This pipeline automates the process of downloading, filtering, and analyzing vertebrate protein datasets to identify CD300 protein homologs across species using BLAST. Steps 1-4 were adapted from the [SIRP-Seeker-Pypeline](https://github.com/Rittika1/SIRP-Seeker-Pypeline).
@@ -20,15 +23,19 @@ This pipeline automates the process of downloading, filtering, and analyzing ver
 ```python3 SIRP-Seeker-Pypeline/filteringproteinfiles.py vertebrate_proteins.faa vertebrate_proteins_cleaned.faa```
 
 ### 5. Remove Specific Species from the Protein File
+The species we removed from this dataset were already searched for their CD300 sequences manually on Ensembl, so there is no reason to search  for them again and can be excluded from this specific pipeline. 
+
 ```sbatch --mem=40G remove_species_from_list.sh vertebrate_proteins_cleaned.faa species_list.txt vertebrate_proteins_cleaned_filtered.faa```
 
 ### 6. Create BLAST Database
 ```makeblastdb -in vertebrate_proteins_cleaned_filtered.faa -dbtype prot```
 
 ### 7. Run BLAST with Human CD300 Proteins
-Manually collect human CD300 proteins into `human_CD300_proteins.fasta` and run:
+Manually collected human CD300 proteins into `human_CD300_proteins.fasta` and run:
 
 ```blastp -query human_CD300_proteins.fasta -db vertebrate_proteins_cleaned.faa -out all_vertebrate_cd300_hits.out -evalue 1e-25 -outfmt 6```
+
+You can manually collect other species' CD300 sequences and BLAST them when you want to search for other clades. 
 
 ### 8-10. Process BLAST Results
 Steps 8, 9, and 10 have been combined into a single script:
@@ -37,7 +44,7 @@ Steps 8, 9, and 10 have been combined into a single script:
 
 This script can potentially run overnight.
 
-#### Individual Scripts Breakdown:
+#### Turning Data into Properly Formatted CSV:
 - **8. Convert BLAST Output to CSV:**
   ```python3 blast_to_csv.py```
 - **9. Add Order and Family Information:**
