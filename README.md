@@ -27,10 +27,12 @@ This pipeline automates the process of downloading, filtering, and analyzing ver
 
 ### 7. Run BLAST with Human CD300 Proteins
 Manually collect human CD300 proteins into `human_CD300_proteins.fasta` and run:
+
 ```blastp -query human_CD300_proteins.fasta -db vertebrate_proteins_cleaned.faa -out all_vertebrate_cd300_hits.out -evalue 1e-25 -outfmt 6```
 
 ### 8-10. Process BLAST Results
 Steps 8, 9, and 10 have been combined into a single script:
+
 ```sbatch --mem=60G Process_BLASTP.sh [BLAST output file] [BLASTP Database] [query CD300 Fasta] [output csv file name]```
 
 This script can potentially run overnight.
