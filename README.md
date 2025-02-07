@@ -47,10 +47,10 @@ This script can potentially run overnight.
 - **8. Convert BLAST Output to CSV:**
   ```python3 blast_to_csv.py```
 - **9. Add Order and Family Information:**
-  ```sbatch --mem=60G add_taxonomy.sh ```
+  ```sbatch --mem=60G add_taxonomy.py ```
   Uses the ITIS (Integrated Taxonomic Information System) API to add taxonomic details (may not work for all species).
 - **10. Add CD300 Names and Isoforms to CSV:**
-  ```sbatch --mem=60G CD300_add_name_isoform_to_csv.sh```
+  ```sbatch --mem=60G CD300_add_name_isoform_to_csv.py```
 
 ## Notes
 - Ensure that all dependencies, including Python and BLAST+, are installed before running the pipeline.
