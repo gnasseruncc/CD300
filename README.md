@@ -37,14 +37,14 @@ Manually collected human CD300 proteins into `human_CD300_proteins.fasta` and ru
 
 You can manually collect other species' CD300 sequences and BLAST them when you want to search for other clades. 
 
-### 8-10. Process BLAST Results
+### 8-10. Process BLAST Results into Properly Formatted CSV
 Steps 8, 9, and 10 have been combined into a single script:
 
 ```sbatch --mem=60G Process_BLASTP.sh [BLAST output file] [BLASTP Database] [query CD300 Fasta] [output csv file name]```
 
 This script can potentially run overnight.
 
-#### Turning Data into Properly Formatted CSV:
+#### Breakdown of individual scripts:
 - **8. Convert BLAST Output to CSV:**
   ```python3 blast_to_csv.py```
 - **9. Add Order and Family Information:**
