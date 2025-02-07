@@ -53,7 +53,7 @@ This script can potentially run overnight.
   ```sbatch --mem=60G CD300_add_name_isoform_to_csv.py```
 
 
-  ## Phase 2: Check CD300 Dataset
+## Phase 2: Check CD300 Dataset
   Now that you have your CSV file with hopefully a lot of putative CD300 sequences, you now need to actually check to see if they are in fact CD300s. The easiest way to do this is by creating phylogenetic trees and BLASTing your results back to humans (or to another species with solid analysis of their CD300 gene cluster - like chickens or dogs).
 
 
