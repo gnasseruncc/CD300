@@ -2,8 +2,6 @@
 The goal of this project is to analyze CD300s
 
 ## Phase 1: Generate CD300 Verebrate Dataset
-
-## Overview
 This pipeline automates the process of downloading, filtering, and analyzing vertebrate protein datasets to identify CD300 protein homologs across species using BLAST. Steps 1-4 were adapted from the [SIRP-Seeker-Pypeline](https://github.com/Rittika1/SIRP-Seeker-Pypeline).
 
 ## Pipeline Steps
