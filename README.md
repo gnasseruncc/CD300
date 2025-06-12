@@ -32,7 +32,7 @@ The species we removed from this dataset were already searched for their CD300 s
 ### 7. Run BLAST with Human CD300 Proteins
 Manually collected human CD300 proteins into `human_CD300_proteins.fasta` and run:
 
-```blastp -query human_CD300_proteins.fasta -db vertebrate_proteins_cleaned.faa -out all_vertebrate_cd300_hits.out -evalue 1e-25 -outfmt 6```
+```blastp -query human_CD300_proteins.fasta -db vertebrate_proteins_cleaned_filtered.faa -out all_vertebrate_cd300_hits.out -evalue 1e-25 -outfmt 6```
 
 You can manually collect other species' CD300 sequences and BLAST them when you want to search for other clades. 
 
